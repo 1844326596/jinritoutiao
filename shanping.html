@@ -13,10 +13,10 @@
 	<div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-        	<img src="img/1.png" alt="">
+        	<img src="img/shanping1.png" alt="">
         </div>
         <div class="swiper-slide">
-        	<img src="img/2.png" alt="">
+        	<img src="img/sahnping2.png" alt="">
         </div>
     </div>
     <!-- 如果需要分页器 -->
@@ -33,5 +33,14 @@
     pagination: {
       el: '.swiper-pagination',
     },
-  })        
+    on: {
+        slideChangeTransitionEnd: function(){
+            if(this.activeIndex==1){
+              location.href = "index.html";
+              setTimeout(function(){},2000);
+            }
+          //切换结束时，告诉我现在是第几个slide
+        },
+      },
+    })        
   </script>
